@@ -1,0 +1,5 @@
+{
+  "webpackPort": 10001,
+  "webAppServerAddress": "http://portfolio.local/",
+  "themeName": "fs-theme"
+}
