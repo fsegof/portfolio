@@ -18,8 +18,8 @@ env:
   phpVersion: '8.2'
   nodeVersion: '18.x'
   rootFolder: ${{ github.workspace }}
-  pluginFolder: "${{ github.workspace }}/wp-content/plugins/ewplugin"
-  themeFolder: "${{ github.workspace }}/wp-content/themes/ew-theme"
+  pluginFolder: "${{ github.workspace }}/wp-content/plugins/fsplugin"
+  themeFolder: "${{ github.workspace }}/wp-content/themes/fs-theme"
 
 jobs:
 
@@ -52,6 +52,7 @@ jobs:
         with:
           node-version: ${{ env.nodeVersion }}
           cache: 'yarn'
+          cache-dependency-path: ${{ env.themeFolder }}
 
       - name: Install composer packages in plugin
         run: composer install --no-interaction --prefer-dist
