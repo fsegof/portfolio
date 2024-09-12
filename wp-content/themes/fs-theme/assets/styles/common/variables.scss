@@ -3,12 +3,17 @@
 //
 
 // Page container
-$max-width-page-container: 1440px;
-$padding-page-container: 20px;
+// Large screen
+$max-width-container-ls: 1320px;
+// Medium screen
+$max-width-container-ms: 1140px;
+// Small screen
+$max-width-container-ss: 960px;
+$padding-page-container: 12px;
 
 // Breakpoints
 $breakpoint-tablet: 768px;
-$breakpoint-mobile: 500px;
+$breakpoint-mobile: 575px;
 
 // Navbars
 $height-navbar: 60px;
