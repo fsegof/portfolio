@@ -1,22 +1,22 @@
 $fontsRoute: '../fonts/';
 
-// Raleway light
+// Sora light
 @font-face {
-  font-family: 'Raleway';
-  src: url($fontsRoute + 'Raleway/Raleway-Light.ttf') format('truetype');
+  font-family: 'Sora';
+  src: url($fontsRoute + 'Sora/Sora-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
-// Raleway normal
+// Sora normal
 @font-face {
   font-family: 'Raleway';
-  src: url($fontsRoute + 'Raleway/Raleway-Regular.ttf') format('truetype');
+  src: url($fontsRoute + 'Sora/Sora-Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
-// Raleway bold
+// Sora bold
 @font-face {
-  font-family: 'Raleway';
-  src: url($fontsRoute + 'Raleway/Raleway-Bold.ttf') format('truetype');
+  font-family: 'Sora';
+  src: url($fontsRoute + 'Sora/Sora-Bold.ttf') format('truetype');
   font-weight: bold;
 }
