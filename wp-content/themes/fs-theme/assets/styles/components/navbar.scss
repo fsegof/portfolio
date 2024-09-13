@@ -8,38 +8,76 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: $height-navbar;
-  background-color: $color-black;
+  background-color: transparent;
   color: $color-white;
 
   // Navbar content container
   .c-container{
+    display: flex;
+    justify-content: space-between;
     margin-top: 0;
     height: 100%;
-    @extend %clearfix;
+    padding: 20px 0;
 
     // Navbar logo container
     .navbar-logo-container{
-      float: left;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
+      max-width: 300px;
+
+      img {
+        max-width: 60px;
+        height: auto;
+      }
     }
 
     // Navbar menu items container
-    .navbar-items-container{
-      height: 100%;
-      float: right;
+    .navbar-navigation {
+      display: flex;
+      align-items: center;
 
-      // Navbar menu item
-      .navbar-item{
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 15px;
-        @include simpleLinkStyles($color-white, $color-red);
+      &__navigation {
+        display: flex;
+        list-style: none;
+
+        // Navigation item
+        &__item {
+          padding: 0 12px;
+
+          // Navigation link
+          a {
+            padding: 10px 0;
+            position: relative;
+            font-size: 1.7rem;
+            @include simpleLinkStyles($color-white, $color-white, none, none);
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              border-radius: 4px;
+              background: $color-primary;
+              background: linear-gradient(260deg, $color-secondary 0%, $color-primary 100%);
+              bottom: 2px;
+              left: 0;
+              transform-origin: right;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover {
+              &:after {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+
+            &.active {
+              &:after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
       }
     }
   }

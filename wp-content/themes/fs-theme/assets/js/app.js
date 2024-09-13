@@ -3,6 +3,7 @@ import '../styles/app.scss';
 
 // Import global components
 import LoadingHelper from './helpers/loading-helper';
+import Navbar from './components/navbar';
 
 /**
  * Global script for whole website
