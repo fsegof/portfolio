@@ -50,6 +50,9 @@
 // Import modal styles
 @import "components/modal";
 
+// Import loading styles
+@import "components/page-loading";
+
 // Gutenberg format type styles
 @import "../gutenberg/format-types/format-type-styles";
 
@@ -65,9 +68,6 @@
 
 // Import styles common to all pages
 @import "pages/common-page/common-page";
-
-// Import home page styles
-@import "pages/home-page/home-page";
 
 // Front page styles
 @import "pages/front-page/front-page";

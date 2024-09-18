@@ -1,0 +1,22 @@
+.c-page-loading-container {
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      text-transform: uppercase;
+      font-size: 2rem;
+      letter-spacing: 2.5rem;
+      animation-name: loading;
+      animation: loading 1s infinite alternate;
+    }
+  }
+}
+
+// Opacity animation
+@keyframes loading {
+  0%   {opacity:1;}
+  100% {opacity:0.1;}
+}

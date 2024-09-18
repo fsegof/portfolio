@@ -8,7 +8,7 @@
 html {
   margin-top: $height-navbar;
   font-size: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Sora', sans-serif;
   font-weight: normal;
 
   &.admin-logged-in {
@@ -22,4 +22,14 @@ html {
 
 body {
   font-size: 1.6rem;
+  color: $color-body-font;
+  background-color: $color-background;
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 3.0rem;
+  }
 }
