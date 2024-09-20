@@ -6,16 +6,22 @@
   // Declare elements here
 
   const ACTIVE_CLASS = 'active';
+  const CLOSE_CLASS = 'close';
 
   // Elements declaration
   let $navigationItem;
+  let $mobileNavigation;
+  let $mobileBurger;
+  let $mobileClose;
 
   /**
    * Elements initialization
    */
   function initElements() {
     $navigationItem = $('.js-nav-item a');
-    console.log($navigationItem);
+    $mobileNavigation = $('.navbar-navigation-mobile');
+    $mobileBurger = $('.js-mobile-burger');
+    $mobileClose = $('.js-mobile-close svg');
   }
 
   /**
@@ -23,6 +29,10 @@
    */
   function initEvents() {
     $navigationItem.on('click', toggleActive);
+    $mobileBurger.on('click', openNavbar);
+    $mobileClose.on('click', closeNavbar);
+    $mobileClose.on('click', closeNavbar);
+    $navigationItem.on('click', closeNavbar);
   }
 
   /**
@@ -31,6 +41,20 @@
   function toggleActive(e) {
     $navigationItem.removeClass(ACTIVE_CLASS);
     $(e.target).addClass(ACTIVE_CLASS);
+  }
+
+  /**
+   * Mobile close navbar
+   */
+  function closeNavbar() {
+    $mobileNavigation.addClass(CLOSE_CLASS);
+  }
+
+  /**
+   * Mobile open navbar
+   */
+  function openNavbar() {
+    $mobileNavigation.removeClass(CLOSE_CLASS);
   }
 
   (function init() {

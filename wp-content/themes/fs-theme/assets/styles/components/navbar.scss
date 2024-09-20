@@ -16,9 +16,11 @@
   .c-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 0;
     height: 100%;
     padding: 20px $padding-page-container;
+    overflow: visible;
 
     // Navbar logo container
     .navbar-logo-container{
@@ -91,6 +93,65 @@
         }
       }
     }
+
+    // Mobile navbar
+    .navbar-navigation-mobile-burger {
+      display: none;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        rect {
+          fill: $color-white;
+        }
+      }
+    }
+
+    .navbar-navigation-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(250deg, $color-secondary 10%, $color-background 80%);
+      text-align: right;
+      transition: all 300ms;
+      transform-origin: 100% 0;
+
+      &__close {
+        svg {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+
+      &__navigation {
+        padding: 0 40px;
+        list-style: none;
+
+        &__item {
+          padding: 10px 0;
+
+          a {
+            @include simpleLinkStyles($color-white, $color-white, none, none);
+            font-size: 2rem;
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      &.close {
+        transform: scale(0);
+      }
+    }
   }
 
   &.admin-logged-in {
@@ -102,5 +163,23 @@
 .admin-bar{
   .c-navbar {
     margin-top: 32px;
+  }
+}
+
+@include respondBetween(0, $breakpoint-tablet) {
+  .c-navbar{
+    .c-container {
+      .navbar-navigation {
+        display: none;
+      }
+
+      .navbar-navigation-mobile-burger {
+        display: block;
+      }
+
+      .navbar-navigation-mobile {
+        display: block;
+      }
+    }
   }
 }
