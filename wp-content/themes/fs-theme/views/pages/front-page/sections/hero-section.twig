@@ -1,0 +1,30 @@
+<section class="hero" id="intro">
+	<div class="c-container">
+		<div class="hero__intro">
+			{# Text column #}
+			<div class="hero__intro__text">
+				<span class="hero__intro__text__supertitle">I am Franko</span>
+				<h1 class="hero__intro__text__title gradient-title">Web Developer +</h1>
+				<p class="hero__intro__text__brief">I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
+				<div class="hero__intro__text__social" >
+					<a class=" c-button" href="#">
+						Download CV
+						{{ load_svg("icon-download.svg") }}
+					</a>
+					<a class="c-social-icon" href="#" target="_blank">
+						{{ load_svg("icon-linkedin.svg") }}
+					</a>
+					<a class="c-social-icon" href="#" target="_blank">
+						{{ load_svg("icon-upwork.svg") }}
+					</a>
+				</div>
+			</div>
+			{# Image column #}
+			<div class="hero__intro__image">
+				<div class="hero__intro__image__container">
+					<img class="hero__intro__image__container__img" src="{{ image("me.webp") }}" alt="Me">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

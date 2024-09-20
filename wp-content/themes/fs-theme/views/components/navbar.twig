@@ -1,7 +1,8 @@
 <nav class="c-navbar js-modal-padding {{ is_admin_logged_in() ? 'admin-logged-in' : '' }}">
     <div class="c-container">
         <div class="navbar-logo-container">
-			<img src="{{ image('logo-white.png') }}" alt="Logo">
+		{#<img src="{{ image('logo-white.png') }}" alt="Logo">#}
+			{{ load_svg("logo.svg") }}
         </div>
 		<div class="navbar-navigation">
 			<ul class="navbar-navigation__navigation">

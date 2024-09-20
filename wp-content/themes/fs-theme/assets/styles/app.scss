@@ -31,6 +31,9 @@
 // Import button styles
 @import "common/buttons";
 
+// Import button styles
+@import "common/gradient-title";
+
 // Import fonts
 @import "../fonts/fonts";
 
@@ -52,6 +55,9 @@
 
 // Import loading styles
 @import "components/page-loading";
+
+// Import social icon style
+@import "components/social-icon";
 
 // Gutenberg format type styles
 @import "../gutenberg/format-types/format-type-styles";

@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+  padding: 200px 0 100px 0;
+  margin-top: -$height-navbar;
+  overflow-x: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 322px;
+    height: 308px;
+    border-radius: 50%;
+    background: $color-primary;
+    background: linear-gradient(260deg, $color-primary 0%, rgba(115, 67, 210, 0) 100%);
+    -webkit-filter: blur(150px);
+    filter: blur(150px);
+    margin-right: -5%;
+    margin-top: -5%;
+    z-index: -1;
+  }
+
+  .c-container {
+    overflow: visible;
+  }
+
+  &__intro {
+    display: flex;
+
+    &__text {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      max-width: 50%;
+      flex: 1 0 auto;
+      text-align: left;
+
+
+      &__supertitle {
+        font-size: 3.6rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      &__title {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      &__brief {
+        font-size: 2rem;
+        line-height: 150%;
+        margin: 0;
+      }
+
+      &__social {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+
+        .c-button {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 17px;
+            height: 17px;
+            margin-left: 5px;
+
+            path {
+              stroke: $color-primary;
+            }
+
+            polyline{
+              stroke: $color-primary;
+            }
+
+            line {
+              stroke: $color-primary;
+            }
+          }
+
+          &:hover {
+            path {
+              stroke: $color-white;
+            }
+
+            polyline{
+              stroke: $color-white;
+            }
+
+            line {
+              stroke: $color-white;
+            }
+          }
+        }
+      }
+    }
+
+    &__image {
+      max-width: 50%;
+      flex: 1 0 auto;
+
+      &__container {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 220px;
+          height: 220px;
+          border-radius: 50%;
+          background: $color-primary;
+          background: linear-gradient(260deg, $color-primary 0%, rgba(115, 67, 210, 0) 100%);
+          filter: blur(150px);
+          margin-left: -5%;
+          margin-bottom: -5%;
+        }
+
+        &__img {
+          max-width: 100%;
+          height: auto;
+          border: 2px solid $color-primary;
+          border-radius: 40px;
+          transform: rotate(7deg);
+        }
+      }
+    }
+  }
+}

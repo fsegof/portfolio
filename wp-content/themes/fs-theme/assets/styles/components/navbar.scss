@@ -10,6 +10,7 @@
   width: 100%;
   background-color: transparent;
   color: $color-white;
+  z-index: 999999;
 
   // Navbar content container
   .c-container{
@@ -17,15 +18,25 @@
     justify-content: space-between;
     margin-top: 0;
     height: 100%;
-    padding: 20px 0;
+    padding: 20px $padding-page-container;
 
     // Navbar logo container
     .navbar-logo-container{
       max-width: 300px;
 
-      img {
-        max-width: 60px;
+      svg {
+        margin-left: -20px;
+        max-width: 80px;
         height: auto;
+
+        path {
+          fill: $color-white;
+          stroke: $color-white;
+        }
+
+        .border {
+          fill: $color-primary;
+        }
       }
     }
 
