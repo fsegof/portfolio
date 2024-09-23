@@ -15,7 +15,6 @@
    */
   function initElements() {
     $navigationItem = $('.js-nav-item a');
-    console.log($navigationItem);
   }
 
   /**
