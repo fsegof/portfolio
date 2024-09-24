@@ -15,6 +15,27 @@
   }
 }
 
+@include respondBetween(0, $breakpoint-tablet) {
+  .c-page-loading-container {
+    &__text {
+      span {
+        letter-spacing: 2rem;
+      }
+    }
+  }
+}
+
+@include respondBetween(0, $breakpoint-mobile) {
+  .c-page-loading-container {
+    &__text {
+      span {
+        font-size: 4vw;
+        letter-spacing: 1rem;
+      }
+    }
+  }
+}
+
 // Opacity animation
 @keyframes loading {
   0%   {opacity:1;}
