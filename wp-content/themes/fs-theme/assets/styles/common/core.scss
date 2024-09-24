@@ -37,3 +37,19 @@ body {
     font-size: 3.0rem;
   }
 }
+
+@include respondBetween(0 ,$breakpoint-tablet) {
+  body {
+    h1 {
+      font-size: 6rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+}

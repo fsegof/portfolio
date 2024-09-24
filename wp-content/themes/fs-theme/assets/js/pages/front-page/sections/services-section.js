@@ -31,7 +31,7 @@
 
     $boxOverlay.css({
       "top": $element.position().top,
-      "height": $element.height() + 41 + 'px',
+      "height": $element.outerHeight() + 'px',
       "transform": "scaleY(1)"
     });
   }
