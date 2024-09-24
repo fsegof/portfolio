@@ -2,8 +2,10 @@
 
 {% block content %}
 	<main>
-		<div class="c-container">
-			<h1 class="js-front-title">Portfolio page</h1>
-		</div>
+		{# Hero section #}
+		{% include 'pages/front-page/sections/hero-section.twig' %}
+
+		{# Services section #}
+		{% include 'pages/front-page/sections/services-section.twig' %}
 	</main>
 {% endblock %}

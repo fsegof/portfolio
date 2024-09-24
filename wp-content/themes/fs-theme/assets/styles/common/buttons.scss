@@ -9,6 +9,7 @@
   padding: 17px 35px;
   transition: background-color 300ms ease-out, transform 150ms ease-out;
   letter-spacing: 1px;
+  text-decoration: none;
 
   &:hover, &:focus {
     color: $color-white;

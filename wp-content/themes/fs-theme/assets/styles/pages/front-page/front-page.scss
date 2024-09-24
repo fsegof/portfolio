@@ -5,19 +5,11 @@
 .front-page {
   main {
     text-align: center;
-
-    h1 {
-      &.red {
-        color: $color-red;
-      }
-    }
-
-    button {
-      margin-top: 30px;
-    }
-
-    #react-root {
-      margin-top: 5rem;
-    }
   }
 }
+
+// Import Hero section styles
+@import "./sections/hero-section";
+
+// Import Services section styles
+@import "./sections/services-section";
