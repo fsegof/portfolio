@@ -3,6 +3,7 @@
   padding: 200px 0 100px 0;
   margin-top: -$height-navbar;
   overflow-x: hidden;
+  transition: padding 150ms;
 
   &:before {
     content: "";
@@ -46,6 +47,15 @@
       &__title {
         margin-top: 0;
         margin-bottom: 15px;
+      }
+
+      &__img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid $color-primary;
+        border-radius: 40px;
+        transform: rotate(7deg);
+        display: none;
       }
 
       &__brief {
@@ -95,6 +105,10 @@
             }
           }
         }
+
+        &__icons {
+          display: flex;
+        }
       }
     }
 
@@ -104,6 +118,7 @@
 
       &__container {
         position: relative;
+        margin: 0 40px;
 
         &:before {
           content: "";
@@ -127,6 +142,102 @@
           border-radius: 40px;
           transform: rotate(7deg);
         }
+      }
+    }
+  }
+}
+
+@include respondBetween(0, $breakpoint-mid-desktop) {
+  .hero {
+    padding: 150px 0 100px 0;
+
+    &__intro {
+      &__text {
+        &__supertitle {
+          font-size: 3rem;
+        }
+
+        &__title {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@include respondBetween(0, $breakpoint-tablet) {
+  .hero {
+    padding: 100px 0;
+
+    &__intro {
+      &__text {
+        max-width: 500px;
+        margin: 0 auto;
+        flex: 1 1 auto;
+
+        &__supertitle {
+          margin-bottom: 0;
+        }
+
+        &__title {
+          margin-bottom: 30px;
+        }
+
+        &__img {
+          display: block;
+          transform: rotate(4deg);
+          margin: 0 40px 40px;
+        }
+
+        &__social {
+          margin-top: 50px;
+        }
+      }
+
+      &__image {
+        display: none;
+      }
+    }
+  }
+}
+
+@include respondBetween(0, $breakpoint-mobile) {
+  .hero {
+    &__intro {
+      &__text {
+        &__supertitle {
+          font-size: 2.7rem;
+          margin-bottom: 10px;
+        }
+
+        &__title {
+          font-size: 4.5rem;
+          line-height: 100%;
+          margin-bottom: 30px;
+        }
+
+        &__img {
+          margin: 0 20px 40px;
+        }
+
+        &__brief {
+          font-size: 1.8rem;
+          line-height: 140%;
+        }
+
+        &__social {
+          margin-top: 30px;
+          flex-wrap: wrap;
+
+          &__icons {
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+      }
+
+      &__image {
+        display: none;
       }
     }
   }

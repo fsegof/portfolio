@@ -51,3 +51,10 @@
     }
   }
 }
+
+@include respondBetween(0, $breakpoint-mobile) {
+  .c-social-icon {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
