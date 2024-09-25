@@ -1,0 +1,31 @@
+<section class="skills" id="skills">
+	<div class="c-container">
+		<h2 class="skills__title gradient-title">My Skills</h2>
+		<div class="skills__container">
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-wp.svg",
+				title: "Wordpress",
+			} %}
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-php.svg",
+				title: "PHP",
+			} %}
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-js.png",
+				title: "JavaScript",
+			} %}
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-sass.svg",
+				title: "SASS",
+			} %}
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-html.png",
+				title: "HTML5",
+			} %}
+			{% include 'components/skill-card.twig' with {
+				logo: "logo-git.png",
+				title: "Git",
+			} %}
+		</div>
+	</div>
+</section>
