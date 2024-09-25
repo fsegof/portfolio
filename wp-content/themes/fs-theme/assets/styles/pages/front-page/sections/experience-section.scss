@@ -1,0 +1,39 @@
+.experience {
+  padding: 120px 0;
+  background-color: $color-black;
+
+  .c-container {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__column {
+    text-align: left;
+    flex: 1 1 50%;
+
+    &__title {
+      display: inline-flex;
+      margin-top: 0;
+    }
+
+    .c-experience-card {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include respondBetween(0, $breakpoint-tablet) {
+  .experience {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .c-container {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    &__column {
+      max-width: 100%;
+    }
+  }
+}
