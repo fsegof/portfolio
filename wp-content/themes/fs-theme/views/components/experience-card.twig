@@ -1,0 +1,10 @@
+<div class="c-experience-card">
+	{% if logo %}
+		<a href="{{ logoHref }}" target="_blank">
+			<img class="c-experience-card__logo" src="{{ image(logo) }}" alt="{{ altText }}">
+		</a>
+	{% endif %}
+	<span class="c-experience-card__time"> {{ time }} </span>
+	<h3 class="c-experience-card__title"> {{ title }} </h3>
+	<span class="c-experience-card__location"> {{ location }} </span>
+</div>
