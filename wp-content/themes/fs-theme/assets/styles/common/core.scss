@@ -10,6 +10,7 @@ html {
   font-size: 10px;
   font-family: 'Sora', sans-serif;
   font-weight: normal;
+  scroll-behavior: smooth;
 
   &.admin-logged-in {
     margin-top: $height-navbar + $height-wp-admin-bar !important;
@@ -35,6 +36,10 @@ body {
 
   h3 {
     font-size: 3.0rem;
+  }
+
+  &.fixed {
+    position: fixed;
   }
 }
 

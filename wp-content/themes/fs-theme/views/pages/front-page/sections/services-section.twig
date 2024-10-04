@@ -1,43 +1,22 @@
 <section class="services" id="services">
 	<div class="c-container">
-		<h2 class="services__title gradient-title">My Services</h2>
+		<h2 class="services__title gradient-title wow animate__animated animate__fadeInUp">My Services</h2>
 		<div class="services__container">
-			<div class="services__container__box js-service-box">
-				<div class="services__container__box__service">
-					<span class="services__container__box__service__number">01</span>
-					<h3 class="services__container__box__service__name">Web design</h3>
-				</div>
-				<div class="services__container__box__description">
-					<p>I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-				</div>
-				<div class="services__container__box__icon">
-					{{ load_svg("icon-arrow.svg") }}
-				</div>
-			</div>
-			<div class="services__container__box js-service-box">
-				<div class="services__container__box__service">
-					<span class="services__container__box__service__number">01</span>
-					<h3 class="services__container__box__service__name">Web design</h3>
-				</div>
-				<div class="services__container__box__description">
-					<p>I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-				</div>
-				<div class="services__container__box__icon">
-					{{ load_svg("icon-arrow.svg") }}
-				</div>
-			</div>
-			<div class="services__container__box js-service-box">
-				<div class="services__container__box__service">
-					<span class="services__container__box__service__number">01</span>
-					<h3 class="services__container__box__service__name">Web design</h3>
-				</div>
-				<div class="services__container__box__description">
-					<p>I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people</p>
-				</div>
-				<div class="services__container__box__icon">
-					{{ load_svg("icon-arrow.svg") }}
-				</div>
-			</div>
+			{% include 'components/service-card.twig' with {
+				number: "01",
+				name: "Web design",
+				description: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people"
+			} %}
+			{% include 'components/service-card.twig' with {
+				number: "01",
+				name: "Web design",
+				description: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people"
+			} %}
+			{% include 'components/service-card.twig' with {
+				number: "01",
+				name: "Web design",
+				description: "I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people"
+			} %}
 			<div class="services__container__overlay js-service-overly"></div>
 		</div>
 	</div>
