@@ -108,6 +108,12 @@ class Ew_Theme {
 
 		// Import WP jQuery
 		self::add_script_to_page('__return_true', 'jquery', '', [], false, true );
+
+		// Import WP jQuery
+		self::add_script_to_page('__return_true', 'wow', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', [], false, true );
+
+		// Import animate css
+		self::add_style_to_page('__return_true', 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', [] );
 	}
 
 	/**

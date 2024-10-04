@@ -2,29 +2,21 @@ import '../../components/modal-overlay';
 import './sections/services-section';
 
 (function FrontPage($) {
-  // Constants declaration
-
-  // Elements declaration
-  let $title;
-  let $exampleBtn;
-  let $reactRoot;
-  let $frontPageModal;
 
   /**
-   * Elements initialization
-   */
-  function initElements() {
-  }
+  * Init wow animations
+  */
 
-  /**
-   * Registers all the needed events for the page
-   */
-  function initEvents() {
-
+  function initWow() {
+    let wow = new WOW(
+      {
+        offset: 300
+      }
+    )
+    wow.init();
   }
 
   (function init() {
-    initElements();
-    initEvents();
+    initWow();
   })();
 })(jQuery);
