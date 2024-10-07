@@ -1,5 +1,5 @@
 .skills {
-  padding: 120px 0;
+  padding: $section-padding-desktop 0;
   background-color: $color-black;
 
   &__title {
@@ -12,5 +12,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+}
+
+@include respondBetween(0, $breakpoint-mobile) {
+  .skills {
+    padding: $section-padding-mobile 0;
   }
 }
