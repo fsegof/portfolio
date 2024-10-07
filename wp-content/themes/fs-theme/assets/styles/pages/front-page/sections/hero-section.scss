@@ -203,6 +203,8 @@
 
 @include respondBetween(0, $breakpoint-mobile) {
   .hero {
+    padding: 100px 0 $section-padding-mobile 0;
+
     &__intro {
       &__text {
         &__supertitle {
@@ -217,7 +219,7 @@
         }
 
         &__img {
-          margin: 0 20px 40px;
+          margin: 20px 20px 50px;
         }
 
         &__brief {

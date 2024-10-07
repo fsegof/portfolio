@@ -39,3 +39,8 @@
   }
 }
 
+@include respondBetween(0, $breakpoint-mobile) {
+  .services {
+    padding: $section-padding-mobile 0;
+  }
+}

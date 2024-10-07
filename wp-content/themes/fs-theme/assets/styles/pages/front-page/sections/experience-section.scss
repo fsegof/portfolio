@@ -1,5 +1,5 @@
 .experience {
-  padding: 120px 0;
+  padding: $section-padding-desktop 0;
   background-color: $color-black;
 
   .c-container {
@@ -35,5 +35,11 @@
     &__column {
       max-width: 100%;
     }
+  }
+}
+
+@include respondBetween(0, $breakpoint-mobile) {
+  .experience {
+    padding: $section-padding-mobile 0;
   }
 }
