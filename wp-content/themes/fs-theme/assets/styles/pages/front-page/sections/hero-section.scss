@@ -113,12 +113,15 @@
     }
 
     &__image {
+      display: flex;
+      justify-content: center;
       max-width: 50%;
       flex: 1 0 auto;
 
       &__container {
         position: relative;
         margin: 0 40px;
+        max-width: 460px;
 
         &:before {
           content: "";
@@ -141,6 +144,7 @@
           border: 2px solid $color-primary;
           border-radius: 40px;
           transform: rotate(7deg);
+          filter: grayscale(60%);
         }
       }
     }
